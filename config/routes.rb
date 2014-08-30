@@ -53,4 +53,14 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  namespace :api do
+    namespace :v1 do
+      resource :steps, only: :index do
+        get :index, action: :update
+      end
+    end
+  end
+
+
 end
