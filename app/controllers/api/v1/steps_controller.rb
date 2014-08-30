@@ -4,7 +4,7 @@ class Api::V1::StepsController < ApplicationController
 
     device_id = params[:id]
     name = params[:name]
-    count = params[:count]
+    count = params[:count].to_i
 
     # StepCount の保存
     sc = StepCount.find_by(device_id:device_id)
